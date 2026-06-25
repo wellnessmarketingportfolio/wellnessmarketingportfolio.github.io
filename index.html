@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gabby Sobieski · Digital Marketing for Wellness Brands</title>
+<meta name="description" content="Gabby Sobieski is a digital marketer who lives and breathes holistic wellness, helping brands grow through strategy, content, social, and copy that sounds human and moves metrics." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cream:#FAF5EC;
+    --cream-2:#F2EADA;
+    --cream-3:#EBE1CD;
+    --ink:#2B2A24;
+    --ink-soft:#4A483F;
+    --olive:#5C6043;
+    --olive-deep:#3E422F;
+    --taupe:#9A8E78;
+    --rule:rgba(43,42,36,0.14);
+    --serif:"Cormorant Garamond", Georgia, serif;
+    --sans:"Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    background:var(--cream);
+    color:var(--ink);
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:0.005em;}
+  p{font-size:1.02rem;color:var(--ink-soft);}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  .eyebrow{
+    font-size:0.72rem;letter-spacing:0.32em;text-transform:uppercase;
+    font-weight:500;color:var(--olive);margin-bottom:22px;
+  }
+  .serif-i{font-style:italic;font-weight:400;}
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:22px 40px;transition:background .4s ease, padding .4s ease, box-shadow .4s ease;
+    mix-blend-mode:normal;
+  }
+  header.nav.scrolled{background:rgba(250,245,236,0.92);backdrop-filter:blur(10px);padding:16px 40px;box-shadow:0 1px 0 var(--rule);}
+  .wordmark{font-family:var(--serif);font-size:1.35rem;letter-spacing:0.16em;color:#fff;transition:color .4s ease;text-transform:uppercase;}
+  header.nav.scrolled .wordmark{color:var(--ink);}
+  nav.links{display:flex;gap:34px;}
+  nav.links a{font-size:0.74rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.92);font-weight:400;transition:color .4s ease, opacity .2s ease;}
+  header.nav.scrolled nav.links a{color:var(--ink-soft);}
+  nav.links a:hover{opacity:0.6;}
+  .menu-btn{display:none;background:none;border:none;color:#fff;font-size:0.74rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;}
+  header.nav.scrolled .menu-btn{color:var(--ink);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;min-height:100vh;display:flex;align-items:center;
+    background:linear-gradient(120deg,#494d36 0%,#6c6f4f 55%,#8a7f66 100%);
+    overflow:hidden;
+  }
+  .hero .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:0.55;}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,42,30,0.65) 0%,rgba(40,42,30,0.25) 60%,rgba(40,42,30,0.1) 100%);}
+  .hero .wrap{position:relative;z-index:2;width:100%;padding-top:120px;padding-bottom:80px;}
+  .hero .eyebrow{color:#E6DFC9;}
+  .hero h1{color:#FBF7EE;font-size:clamp(2.7rem,6.4vw,5.2rem);font-weight:400;max-width:16ch;}
+  .hero h1 em{font-style:italic;color:#EEE6CF;}
+  .hero p.lead{color:rgba(255,255,255,0.92);font-size:1.12rem;font-weight:300;max-width:52ch;margin-top:30px;}
+  .hero .scrollcue{display:inline-flex;align-items:center;gap:12px;margin-top:46px;color:#F2ECDB;font-size:0.72rem;letter-spacing:0.26em;text-transform:uppercase;}
+  .hero .scrollcue .line{width:54px;height:1px;background:rgba(255,255,255,0.6);display:inline-block;animation:pulse 2.4s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:.4;transform:scaleX(.6);}50%{opacity:1;transform:scaleX(1);}}
+
+  /* ---------- SECTION BASICS ---------- */
+  section{padding:118px 0;}
+  .section-head{max-width:760px;margin-bottom:60px;}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+  h2.display{font-size:clamp(2.1rem,4.6vw,3.5rem);font-weight:400;letter-spacing:0.01em;}
+  h2.display em{font-style:italic;}
+  .lede{font-size:1.16rem;color:var(--ink-soft);font-weight:300;margin-top:24px;line-height:1.75;}
+
+  /* ---------- INTRO STRIP ---------- */
+  .intro{background:var(--cream);text-align:center;padding:128px 0;}
+  .intro .mark{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--olive);margin-bottom:30px;}
+  .intro p{font-size:clamp(1.5rem,3.1vw,2.25rem);font-family:var(--serif);font-weight:400;line-height:1.4;color:var(--ink);max-width:24ch;margin:0 auto;}
+  .intro .sub{font-family:var(--sans);font-size:1.05rem;max-width:60ch;margin:34px auto 0;color:var(--ink-soft);line-height:1.8;}
+
+  /* ---------- CAPABILITIES ---------- */
+  .caps{background:var(--cream-2);}
+  .caps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:18px;}
+  .cap{background:var(--cream-2);padding:38px 30px;min-height:240px;display:flex;flex-direction:column;transition:background .35s ease;}
+  .cap:hover{background:var(--cream);}
+  .cap .num{font-size:0.72rem;letter-spacing:0.2em;color:var(--olive);margin-bottom:auto;}
+  .cap h3{font-size:1.5rem;margin:26px 0 12px;font-weight:500;}
+  .cap p{font-size:0.92rem;line-height:1.65;}
+
+  /* ---------- WORK ---------- */
+  .work{background:var(--cream);}
+  .case{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:64px 0;border-top:1px solid var(--rule);}
+  .case:first-of-type{border-top:none;}
+  .case.flip .case-media{order:2;}
+  .case-body .kicker{font-size:0.72rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--olive);margin-bottom:18px;}
+  .case-body h3{font-size:clamp(1.9rem,3vw,2.6rem);font-weight:400;margin-bottom:8px;}
+  .case-body .role{font-style:italic;font-family:var(--serif);font-size:1.25rem;color:var(--taupe);margin-bottom:22px;}
+  .case-body p{margin-bottom:18px;}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
+  .chip{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--olive-deep);border:1px solid var(--rule);border-radius:40px;padding:7px 15px;background:var(--cream);}
+  .samples{margin-top:26px;display:grid;gap:12px;}
+  .sample{background:var(--cream-2);border-left:2px solid var(--olive);padding:14px 18px;font-size:0.92rem;color:var(--ink-soft);font-style:italic;font-family:var(--serif);font-size:1.12rem;line-height:1.5;}
+  .vlink{display:inline-flex;align-items:center;gap:10px;margin-top:8px;font-size:0.74rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--olive-deep);border-bottom:1px solid var(--olive);padding-bottom:4px;}
+  .vlink:hover{opacity:.65;}
+
+  /* media slots */
+  .media{position:relative;width:100%;aspect-ratio:4/5;background:var(--cream-3);overflow:hidden;border-radius:2px;}
+  .media.wide{aspect-ratio:16/10;}
+  .media img{width:100%;height:100%;object-fit:cover;display:block;}
+  .media__label{display:none;}
+  .media--empty{background:linear-gradient(135deg,var(--cream-3),var(--cream-2));}
+  .media--empty .media__label{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+    position:absolute;inset:0;color:var(--taupe);text-align:center;padding:20px;
+    font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;
+  }
+  .media--empty .media__label::before{content:"＋";font-size:1.8rem;letter-spacing:0;opacity:.7;}
+  .ytframe{width:100%;aspect-ratio:16/9;border:none;border-radius:2px;background:#000;}
+
+  /* ---------- CREATOR CAROUSEL ---------- */
+  .creator{background:var(--olive-deep);color:#F4EFE2;}
+  .creator .eyebrow{color:#C9CBA6;}
+  .creator h2.display{color:#FBF7EE;}
+  .creator .lede{color:rgba(244,239,226,0.82);}
+  .carousel{position:relative;margin-top:54px;}
+  .track-mask{overflow:hidden;}
+  .track{display:flex;transition:transform .6s cubic-bezier(.5,.05,.1,1);}
+  .slide{min-width:100%;display:grid;grid-template-columns:0.85fr 1fr;gap:50px;align-items:center;}
+  .slide .media{aspect-ratio:4/5;max-width:340px;background:#2c3022;border:1px solid rgba(255,255,255,0.08);}
+  .slide .media--empty{background:linear-gradient(135deg,#33381f,#454a30);}
+  .slide .media--empty .media__label{color:#9ca07f;}
+  .slide-copy .tag{font-size:0.72rem;letter-spacing:0.24em;text-transform:uppercase;color:#C9CBA6;margin-bottom:18px;}
+  .slide-copy .caption{font-family:var(--serif);font-size:1.5rem;font-style:italic;line-height:1.45;color:#F6F1E3;font-weight:400;}
+  .metrics{display:flex;gap:36px;margin-top:32px;flex-wrap:wrap;}
+  .metric .n{font-family:var(--serif);font-size:2.3rem;color:#fff;line-height:1;}
+  .metric .l{font-size:0.74rem;letter-spacing:0.06em;color:rgba(244,239,226,0.7);margin-top:8px;max-width:18ch;}
+  .note{font-size:0.92rem;color:rgba(244,239,226,0.7);margin-top:26px;font-style:italic;}
+  .car-controls{display:flex;align-items:center;justify-content:space-between;margin-top:44px;}
+  .dots{display:flex;gap:10px;}
+  .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.28);border:none;cursor:pointer;padding:0;transition:background .3s,width .3s;}
+  .dot.active{background:#E7E2CC;width:26px;border-radius:6px;}
+  .arrows{display:flex;gap:12px;}
+  .arrow{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,0.3);background:none;color:#F4EFE2;cursor:pointer;font-size:1.1rem;transition:background .3s,color .3s;display:flex;align-items:center;justify-content:center;}
+  .arrow:hover{background:#F4EFE2;color:var(--olive-deep);}
+
+  /* ---------- METRICS BAND ---------- */
+  .band{background:var(--cream-2);text-align:center;}
+  .band-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-top:10px;}
+  .stat .n{font-family:var(--serif);font-size:clamp(3rem,5vw,4.4rem);color:var(--olive);line-height:1;font-weight:500;}
+  .stat .l{font-size:0.9rem;color:var(--ink-soft);margin-top:14px;line-height:1.5;}
+
+  /* ---------- RANGE ---------- */
+  .range{background:var(--cream);}
+  .range-list{margin-top:30px;border-top:1px solid var(--rule);}
+  .range-row{display:grid;grid-template-columns:0.5fr 1fr 0.9fr;gap:30px;padding:30px 0;border-bottom:1px solid var(--rule);align-items:baseline;}
+  .range-row .co{font-family:var(--serif);font-size:1.5rem;color:var(--ink);}
+  .range-row .ro{font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--olive);}
+  .range-row .de{font-size:0.96rem;color:var(--ink-soft);}
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--olive);color:#F4EFE2;}
+  .about-grid{display:grid;grid-template-columns:0.85fr 1fr;gap:64px;align-items:center;}
+  .about .media{aspect-ratio:4/5;background:#4f5439;}
+  .about .media--empty{background:linear-gradient(135deg,#515638,#6a6f4c);}
+  .about .media--empty .media__label{color:#cdd0ad;}
+  .about .eyebrow{color:#CDD0AD;}
+  .about h2.display{color:#FBF7EE;}
+  .about p{color:rgba(244,239,226,0.9);margin-bottom:20px;font-size:1.05rem;}
+  .about .pull{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:#fff;line-height:1.4;margin:8px 0 24px;}
+
+  /* ---------- RECS ---------- */
+  .recs{background:var(--cream);}
+  .recs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:18px;}
+  .rec{background:var(--cream-2);padding:34px 30px;border-radius:2px;display:flex;flex-direction:column;}
+  .rec .quote{font-family:var(--serif);font-size:1.18rem;font-style:italic;color:var(--ink);line-height:1.5;margin-bottom:24px;}
+  .rec .who{margin-top:auto;}
+  .rec .who .nm{font-size:0.92rem;font-weight:500;color:var(--ink);letter-spacing:0.02em;}
+  .rec .who .tt{font-size:0.78rem;color:var(--taupe);margin-top:4px;line-height:1.4;}
+  .rec .mark{font-family:var(--serif);font-size:2.4rem;color:var(--olive);line-height:0.5;margin-bottom:10px;}
+
+  /* ---------- APPROACH ---------- */
+  .approach{background:var(--cream-2);}
+  .approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+  .approach .lede{margin-top:0;}
+  .approach ul{list-style:none;margin-top:30px;display:grid;gap:18px;}
+  .approach li{display:flex;gap:16px;align-items:flex-start;font-size:1rem;color:var(--ink-soft);}
+  .approach li .b{color:var(--olive);font-family:var(--serif);font-size:1.3rem;line-height:1;margin-top:2px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--olive-deep);color:#EDE7D5;text-align:center;padding:120px 0 60px;}
+  footer .close{font-family:var(--serif);font-size:clamp(1.8rem,3.6vw,2.8rem);font-weight:400;line-height:1.35;max-width:22ch;margin:0 auto 50px;color:#FBF7EE;}
+  footer .close em{font-style:italic;}
+  footer .fwordmark{font-family:var(--serif);letter-spacing:0.22em;font-size:1.2rem;text-transform:uppercase;color:#EDE7D5;}
+  footer .small{font-size:0.74rem;letter-spacing:0.12em;color:rgba(237,231,213,0.6);margin-top:18px;}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ---------- GALLERY / CONTAIN MEDIA ---------- */
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .gallery .media{aspect-ratio:1;}
+  .media.contain{aspect-ratio:4/3;background:#fff;border:1px solid var(--rule);}
+  .media.contain img{object-fit:contain;}
+  .media.square-contain{aspect-ratio:1;background:#fff;border:1px solid var(--rule);}
+  .media.square-contain img{object-fit:contain;}
+  .media video{width:100%;height:100%;object-fit:cover;display:block;}
+  .video-portrait{aspect-ratio:9/16;max-width:330px;background:#2c3022;}
+  .case-media .video-portrait{margin:0 auto;}
+  .nowrap{white-space:nowrap;}
+  .media-link{display:block;}
+  .media-link .vlink{margin-top:16px;}
+  /* sandstone poster link */
+  .video-poster{position:relative;display:block;aspect-ratio:16/9;border-radius:2px;overflow:hidden;background:#000;}
+  .video-poster img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;transition:opacity .3s;}
+  .video-poster:hover img{opacity:1;}
+  .video-poster .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+  .video-poster .play span{width:74px;height:74px;border-radius:50%;background:rgba(250,245,236,0.92);color:var(--olive-deep);display:flex;align-items:center;justify-content:center;font-size:1.6rem;padding-left:6px;box-shadow:0 6px 24px rgba(0,0,0,0.3);transition:transform .3s;}
+  .video-poster:hover .play span{transform:scale(1.08);}
+
+  /* ---------- WRITING SAMPLE ---------- */
+  .writing-sample{background:var(--cream-2);border:1px solid var(--rule);border-radius:2px;padding:38px 36px;position:relative;}
+  .writing-sample .ws-label{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--olive);margin-bottom:20px;}
+  .writing-sample p{font-family:var(--serif);font-style:italic;font-size:1.42rem;line-height:1.5;color:var(--ink);margin:0;}
+
+  /* ---------- INLINE METRICS ---------- */
+  .metrics-inline{display:flex;gap:38px;margin-top:22px;flex-wrap:wrap;}
+  .metrics-inline .n{font-family:var(--serif);font-size:2rem;color:var(--olive);display:block;line-height:1;}
+  .metrics-inline div{font-size:0.85rem;color:var(--ink-soft);}
+  .range-foot{margin-top:46px;padding-top:30px;border-top:1px solid var(--rule);font-size:1rem;color:var(--ink-soft);font-style:italic;font-family:var(--serif);font-size:1.2rem;}
+
+  /* ---------- PROOF (before/after) ---------- */
+  .proof{background:var(--cream-2);}
+  .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+  .proof-grid .media{aspect-ratio:1;background:#fff;border:1px solid var(--rule);}
+  .proof-grid .media img{object-fit:contain;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:980px){
+    .caps-grid{grid-template-columns:repeat(2,1fr);}
+    .band-grid{grid-template-columns:repeat(2,1fr);gap:48px;}
+    .recs-grid{grid-template-columns:1fr 1fr;}
+    .case,.about-grid,.approach-grid,.proof-grid{grid-template-columns:1fr;gap:36px;}
+    .case.flip .case-media{order:0;}
+    .slide{grid-template-columns:1fr;gap:30px;text-align:center;}
+    .slide .media{margin:0 auto;}
+    .metrics{justify-content:center;}
+    .range-row{grid-template-columns:1fr;gap:8px;}
+    .range-row .ro{order:-1;}
+  }
+  @media(max-width:680px){
+    .wrap{padding:0 22px;}
+    header.nav{padding:18px 22px;}
+    nav.links{display:none;}
+    .menu-btn{display:block;}
+    section{padding:80px 0;}
+    .caps-grid{grid-template-columns:1fr;}
+    .recs-grid{grid-template-columns:1fr;}
+    .band-grid{grid-template-columns:1fr;gap:40px;}
+    .hero h1{font-size:2.4rem;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#top" class="wordmark">Gabby Sobieski</a>
+  <nav class="links">
+    <a href="#work">Work</a>
+    <a href="#creator">Creator</a>
+    <a href="#range">Range</a>
+    <a href="#about">About</a>
+    <a href="#approach">Approach</a>
+  </nav>
+  <button class="menu-btn" onclick="document.querySelector('nav.links').scrollIntoView();window.location.hash='#work';">Menu</button>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <img class="hero-img" src="./hero.jpg" alt="" onerror="this.style.display='none';" />
+  <div class="wrap">
+    <div class="eyebrow">Digital Marketing From Strategy Through Execution</div>
+    <h1>Growth marketing for wellness brands, built by someone <span class="nowrap">who <em>lives it</em>.</span></h1>
+    <p class="lead">I'm Gabby, a digital marketer who's spent the better part of a decade helping brands sound like themselves and grow because of it. Wellness isn't a vertical I picked up along the way; it's how I live, which means I understand your customer because in a lot of ways, I am her.</p>
+    <a href="#work" class="scrollcue"><span class="line"></span> See the work</a>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro reveal">
+  <div class="wrap">
+    <div class="mark">✦</div>
+    <p>I help health brands grow without sounding like everyone else in the feed.</p>
+    <p class="sub">From the first line of strategy to the last pixel of execution, I own the work that makes a brand feel trustworthy, human, and impossible to scroll past. Blog, site, social, email, community, copy. I've done all of it, often as the whole team.</p>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="caps" id="capabilities">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">What I own</div>
+      <h2 class="display">Everything between the <em>idea</em> and the <em>result</em>.</h2>
+      <p class="lede">My freelance years mean I've advised brands all the way from positioning through the day-to-day execution, and beyond. I can sit in the strategy conversation and then go build the thing myself.</p>
+    </div>
+    <div class="caps-grid reveal">
+      <div class="cap"><div class="num">01</div><h3>Blog &amp; SEO content</h3><p>Search-aware posts that read like a person wrote them, because one did. I plan the calendar, write the pieces, and tie each one back to what your customers are searching for.</p></div>
+      <div class="cap"><div class="num">02</div><h3>Site management</h3><p>Owning the site day to day, from WordPress updates and landing pages to the small SEO details that quietly compound over time.</p></div>
+      <div class="cap"><div class="num">03</div><h3>Social media</h3><p>Strategy, design, copy, scheduling, and community, end to end. I've run accounts where I was the entire team, and I like it that way.</p></div>
+      <div class="cap"><div class="num">04</div><h3>Reddit &amp; community</h3><p>I understand how Reddit works, where the wellness conversations are happening and how a brand earns a place in them without getting flagged as a brand.</p></div>
+      <div class="cap"><div class="num">05</div><h3>Copywriting</h3><p>From product pages to email flows to the single line that has to carry a whole campaign. Clear, warm, and built to convert.</p></div>
+      <div class="cap"><div class="num">06</div><h3>Email marketing</h3><p>Flows and campaigns people open because they're worth opening. I've grown cadence and reach without burning out a list.</p></div>
+      <div class="cap"><div class="num">07</div><h3>Creative &amp; design</h3><p>Fluent in the Adobe Creative Suite, so I can take something from idea to finished graphic without waiting on anyone's queue.</p></div>
+      <div class="cap"><div class="num">08</div><h3>Strategy &amp; analytics</h3><p>I build the plan, set the KPIs, and report on what worked. I care about the number at the end of the quarter as much as the craft along the way.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Selected work · Wellness</div>
+      <h2 class="display">Health brands I've helped <em>grow</em>.</h2>
+    </div>
+
+    <!-- Doc Health -->
+    <div class="case reveal">
+      <div class="case-media">
+        <div class="gallery">
+          <div class="media"><img src="./doc-1.jpg" alt="Doc Health social graphic" onerror="this.style.display='none';this.parentElement.classList.add('media--empty');" /><span class="media__label">doc-1.jpg</span></div>
+          <div class="media"><img src="./doc-2.jpg" alt="Doc Health social graphic" onerror="this.style.display='none';this.parentElement.classList.add('media--empty');" /><span class="media__label">doc-2.jpg</span></div>
+          <div class="media"><img src="./doc-3.jpg" alt="Doc Health social graphic" onerror="this.style.display='none';this.parentElement.classList.add('media--empty');" /><span class="media__label">doc-3.jpg</span></div>
+          <div class="media"><img src="./doc-4.jpg" alt="Doc Health social graphic" onerror="this.style.display='none';this.parentElement.classList.add('media--empty');" /><span class="media__label">doc-4.jpg</span></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="kicker">Houston · 2022–2023</div>
+        <h3>Doc Health</h3>
+        <div class="role">Social media, owned end to end</div>
+        <p>Doc brings healthcare into people's homes, which is a wonderful idea that still has to be explained simply and made to feel safe. I ran their social presence from strategy through execution: monthly content calendars, graphic design, copywriting, scheduling, and community monitoring.</p>
+        <p>I built a voice that was warm and trustworthy while staying clear enough that anyone could act on it, whether the post was about a routine in-home visit, an awareness month, or an at-home Botox party with girlfriends. Every graphic here is one I designed.</p>
+        <div class="samples">
+          <div class="sample">"No more crowded waiting rooms. Doc brings the healthcare to you with convenient in-home visits."</div>
+          <div class="sample">"Busy families love Doc. The convenience of in-home visits works with your busy schedule."</div>
+        </div>
+        <div class="chips">
+          <span class="chip">Strategy</span><span class="chip">Content Calendar</span><span class="chip">Graphic Design</span><span class="chip">Copywriting</span><span class="chip">Community</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Better Way Health -->
+    <div class="case flip reveal">
+      <div class="case-media">
+        <div class="media video-portrait">
+          <video src="./bwh.mp4" poster="./bwh-poster.jpg" autoplay muted loop playsinline></video>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="kicker">Wellness · Current</div>
+        <h3>Better Way Health</h3>
+        <div class="role">Social media &amp; affiliate, owned</div>
+        <p>I own social media and affiliate marketing for Better Way Health, which means everything from the strategy down to the content people see in their feed. Some of it I film and star in myself, like the reel here; the rest I produce by writing UGC scripts and directing a roster of creators, so the brand shows up consistently and on message.</p>
+        <p>It's the kind of work that sits right at the center of this role, owning a channel end to end and making real content that real people stop for.</p>
+        <div class="samples">
+          <div class="sample">"POV: you're romanticizing your immune routine. Whatever your style, there are so many ways to fit BWH85 into your daily routine."</div>
+        </div>
+        <div class="chips">
+          <span class="chip">Social Strategy</span><span class="chip">Affiliate</span><span class="chip">UGC Scripts</span><span class="chip">Creator Management</span><span class="chip">On-Camera</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sandstone -->
+    <div class="case reveal">
+      <div class="case-media">
+        <a class="video-poster" href="https://www.youtube.com/watch?v=dOVegGAGw70" target="_blank" rel="noopener" title="Watch the Sandstone Health commercial">
+          <img src="https://img.youtube.com/vi/dOVegGAGw70/hqdefault.jpg" alt="Sandstone Health commercial" />
+          <span class="play"><span>▶</span></span>
+        </a>
+      </div>
+      <div class="case-body">
+        <div class="kicker">Houston · Commercial production</div>
+        <h3>Sandstone Health</h3>
+        <div class="role">Strategy &amp; on-set production</div>
+        <p>For Sandstone's commercial shoot, I helped shape the creative strategy and then worked on set through the day itself, from pre-production planning to making sure what we'd mapped out came to life on camera.</p>
+        <p>It's the part of the job I love most, when a plan on paper turns into something real that a brand can use everywhere.</p>
+        <a class="vlink" href="https://www.youtube.com/watch?v=dOVegGAGw70" target="_blank" rel="noopener">Watch the spot →</a>
+        <div class="chips">
+          <span class="chip">Creative Strategy</span><span class="chip">Pre-Production</span><span class="chip">On-Set</span><span class="chip">Video</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREATOR CAROUSEL -->
+<section class="creator" id="creator">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">On the creator side</div>
+      <h2 class="display">I don't just market wellness.<br>I <em>make</em> it.</h2>
+      <p class="lede">I've filmed and posted my own wellness content, which keeps me close to how the platforms behave and what makes real people stop and save. Here's some of what I've made.</p>
+    </div>
+
+    <div class="carousel reveal">
+      <div class="track-mask">
+        <div class="track" id="track">
+
+          <!-- Slide 1 -->
+          <div class="slide">
+            <div class="media">
+              <video src="./tiktok-1.mp4" poster="./tiktok-1-poster.jpg" autoplay muted loop playsinline></video>
+            </div>
+            <div class="slide-copy">
+              <div class="tag">Wellness content · 01</div>
+              <p class="caption">"Wellness things I'm loving lately."</p>
+              <div class="metrics">
+                <div class="metric"><div class="n">24K</div><div class="l">views</div></div>
+                <div class="metric"><div class="n">1.2K</div><div class="l">likes</div></div>
+                <div class="metric"><div class="n">495</div><div class="l">saves</div></div>
+                <div class="metric"><div class="n">86.6%</div><div class="l">from the For You page</div></div>
+              </div>
+              <p class="note">That last number matters most. Nearly nine in ten views came from people who'd never seen me before, which is exactly what you want when you're trying to reach a brand-new audience.</p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slide">
+            <div class="media">
+              <video src="./tiktok-2.mp4" poster="./tiktok-2-poster.jpg" autoplay muted loop playsinline></video>
+            </div>
+            <div class="slide-copy">
+              <div class="tag">Wellness content · 02</div>
+              <p class="caption">"Anyone who knows me knows I'm serious about my sleep. In bed by 9:30, no overhead lights past 7:00. Here are a few products that help me unwind and keep my sleep score above an 85."</p>
+              <p class="note">This one's here because it shows how deep my passion for this space runs. I make wellness content because I can't help it, and that instinct comes straight back into the brand work.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="car-controls">
+        <div class="dots" id="dots"></div>
+        <div class="arrows">
+          <button class="arrow" id="prev" aria-label="Previous">←</button>
+          <button class="arrow" id="next" aria-label="Next">→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS BAND -->
+<section class="band reveal">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow">A few numbers</div>
+      <h2 class="display">I'm here for the <em>results</em>.</h2>
+    </div>
+    <div class="band-grid">
+      <div class="stat"><div class="n">+52%</div><div class="l">spike in reach in the first month</div></div>
+      <div class="stat"><div class="n">+134%</div><div class="l">increase in engagement</div></div>
+      <div class="stat"><div class="n">+200%</div><div class="l">sales growth in three months</div></div>
+      <div class="stat"><div class="n">+120%</div><div class="l">lift in email marketing cadence</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF: before/after -->
+<section class="proof">
+  <div class="wrap">
+    <div class="proof-grid">
+      <div class="reveal">
+        <div class="eyebrow">Before &amp; after</div>
+        <h2 class="display">Same brand. One month <em>apart</em>.</h2>
+        <p class="lede">When I took over this client's social, we set clear objectives and a cohesive look before posting a single thing. After one month they saw a 52% spike in reach and a 134% jump in engagement, and the month after that they reached 42% more people who weren't following them yet. Fresh eyes, which is how new customers find you.</p>
+      </div>
+      <div class="reveal">
+        <div class="media contain">
+          <img src="./social-case.jpg" alt="Before and after social media results" onerror="this.style.display='none';this.parentElement.classList.add('media--empty');" />
+          <span class="media__label">social-case.jpg</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RANGE -->
+<section class="range" id="range">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">The range</div>
+      <h2 class="display">Wellness is home base. The <em>reps</em> came from everywhere.</h2>
+      <p class="lede">I've built campaigns across B2B SaaS, fast casual, multi-use retail, and e-commerce. That breadth is part of why I can move quickly and advise with a wide-angle view. A few that show the range:</p>
+    </div>
+
+    <!-- Kickstand -->
+    <div class="case flip reveal">
+      <div class="case-media">
+        <a class="media-link" href="https://meetkickstand.com/the-pitch-report/" target="_blank" rel="noopener">
+          <div class="media contain" style="aspect-ratio:4/5">
+            <img src="./kickstand-pitchreport.jpg" alt="The Pitch Report by Kickstand" onerror="this.style.display='none';this.parentElement.classList.add('media--empty');" />
+            <span class="media__label">./kickstand-pitchreport.jpg<br>Pitch Report graphic</span>
+          </div>
+          <span class="vlink">View The Pitch Report →</span>
+        </a>
+      </div>
+      <div class="case-body">
+        <div class="kicker">B2B SaaS · PR · Current</div>
+        <h3>Kickstand</h3>
+        <div class="role">Content, email, paid social, and a little code</div>
+        <p>I own Kickstand's blog and ghostwrite the large majority of their posts. I built and run their email lead-nurture program, and I lead social ad strategy, design, and execution. I also built The Pitch Report end to end, the survey behind it, the ebook itself, and the landing page it lives on, so one core asset does a whole lot of jobs at once.</p>
+        <p>When the data called for it, I designed and built a custom signal-based outreach tool to support our sales funnel, because sometimes the fastest way to get the thing you need is to make it yourself.</p>
+        <div class="chips">
+          <span class="chip">Ghostwriting</span><span class="chip">Blog Ownership</span><span class="chip">Email Nurture</span><span class="chip">Paid Social</span><span class="chip">Lead Magnets</span><span class="chip">Light Dev</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bread Zeppelin -->
+    <div class="case reveal">
+      <div class="case-media">
+        <div class="media contain">
+          <img src="./breadz.jpg" alt="Bread Zeppelin marketing samples" onerror="this.style.display='none';this.parentElement.classList.add('media--empty');" />
+          <span class="media__label">breadz.jpg</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="kicker">Fast casual · 4-year partnership</div>
+        <h3>Bread Zeppelin</h3>
+        <div class="role">Brand, social, print, and store openings</div>
+        <p>Bread Zeppelin brought me on to overhaul their marketing, and I owned strategy, design, copywriting, execution, and reporting across the brand. Menu design, social, email, in-app push, in-store print, loyalty, and a rinse-and-repeat new-store opening playbook with influencer, direct mail, and community pieces.</p>
+        <p>When I revamped their grand-opening process, the result was a line around the block.</p>
+        <div class="chips">
+          <span class="chip">Brand Identity</span><span class="chip">Menu Design</span><span class="chip">Social</span><span class="chip">Email</span><span class="chip">Loyalty</span><span class="chip">Store Openings</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vogue Wigs -->
+    <div class="case flip reveal">
+      <div class="case-media">
+        <div class="media contain">
+          <img src="./voguewigs.jpg" alt="Vogue Wigs social design grid" onerror="this.style.display='none';this.parentElement.classList.add('media--empty');" />
+          <span class="media__label">voguewigs.jpg</span>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="kicker">E-commerce</div>
+        <h3>Vogue Wigs</h3>
+        <div class="role">Visual identity, SEO, email, paid, SMS</div>
+        <p>An online wig retailer that needed a clearer identity and simpler communications. I handcrafted a multifaceted approach across SEO, email, a promotional calendar, social, paid media, and SMS, and I had a lot of fun, and learned more about wigs than I ever imagined, along the way.</p>
+        <div class="metrics-inline">
+          <div><span class="n">+200%</span> sales in three months</div>
+          <div><span class="n">+67%</span> social media reach</div>
+        </div>
+        <div class="chips">
+          <span class="chip">SEO</span><span class="chip">Email</span><span class="chip">Paid Media</span><span class="chip">SMS</span><span class="chip">Social</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="range-foot reveal">Plus reps in multi-use retail and real estate, coordinating across 15-plus on-site restaurants, along with financial services, mortgage, and event marketing.</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="media">
+          <img src="./about.jpg" alt="Gabby Sobieski" onerror="this.style.display='none';this.parentElement.classList.add('media--empty');" />
+          <span class="media__label">./about.jpg<br>portrait / lifestyle photo</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="eyebrow">Why wellness</div>
+        <h2 class="display">This isn't a niche for me. It's how I <em>live</em>.</h2>
+        <p>Outside of work, wellness is the whole thing for me. I'm the friend who reads the labels, tries the protocol first, and goes deep on whatever's coming next. I consider myself an early adopter, always looking for ways to optimize my health and limit what I'm exposed to.</p>
+        <p>Last year I was diagnosed with Hashimoto's, and instead of treating it as a footnote, I let it pull me all the way in. Through a lot of research, a lot of small daily changes, and a real commitment to my own health, I was able to get my Hashimoto's into remission.</p>
+        <p class="pull">That experience sharpened my instinct for what people searching for health support are really going through.</p>
+        <p>It's why I have such a strong pulse on this space, what's working, what's coming next, and what truly matters to someone who's just trying to feel better. When the thing you market all day is the thing you care about most, the work stops feeling like marketing and starts feeling like help.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECOMMENDATIONS -->
+<section class="recs">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">In their words</div>
+      <h2 class="display">What it's like to <em>work with me</em>.</h2>
+    </div>
+    <div class="recs-grid reveal">
+      <div class="rec">
+        <div class="mark">"</div>
+        <div class="quote">Gabby is talented, driven and a joy to work with. In a fast-paced environment that can be stressful at times, she maintains composure and exhibits both patience and grace. I look forward to working with Gabby for years to come, for her creativity, her versatility, her talents, and her heart.</div>
+        <div class="who"><div class="nm">Amy Lawler Good</div><div class="tt">Marketing &amp; Advertising Consultant · managed Gabby directly</div></div>
+      </div>
+      <div class="rec">
+        <div class="mark">"</div>
+        <div class="quote">I had the opportunity to witness Gabby's outstanding client relationship skills firsthand. She consistently went above and beyond to ensure her clients' satisfaction, and her dedication to delivering outstanding results is truly commendable.</div>
+        <div class="who"><div class="nm">Danielle Capel</div><div class="tt">Founder &amp; CMO, SOL Eyewear · client</div></div>
+      </div>
+      <div class="rec">
+        <div class="mark">"</div>
+        <div class="quote">Gabby demonstrated a strong work ethic and a commitment to high-quality work. She has a deep understanding of social media, including best practices and user experience, which gives her a unique ability to connect with and engage an audience. She's a creative thinker who excels at producing engaging content.</div>
+        <div class="who"><div class="nm">Maddie Hisaw</div><div class="tt">SVP of Marketing · managed Gabby directly</div></div>
+      </div>
+      <div class="rec">
+        <div class="mark">"</div>
+        <div class="quote">Gabby is one of the most adaptable and ambitious people I have ever worked with. No matter the challenge, she's always willing to step in and help with a great attitude. Her drive to grow our social media contributed to great success.</div>
+        <div class="who"><div class="nm">Kayla Padol</div><div class="tt">VP of Marketing · worked with Gabby</div></div>
+      </div>
+      <div class="rec">
+        <div class="mark">"</div>
+        <div class="quote">She's skilled in strategic planning, a self-starter who goes above and beyond on every project she commits herself to. She's a role model to many and an inspiration to those around her, always offering help and making a positive impact wherever she goes.</div>
+        <div class="who"><div class="nm">Victoria Hempstead</div><div class="tt">Digital Sales Manager · served with Gabby on the executive board of Pi Beta Phi</div></div>
+      </div>
+      <div class="rec">
+        <div class="mark">"</div>
+        <div class="quote">Gabby is one of the most motivated women I have ever met. Her drive for success is inspirational and her work ethic is unstoppable.</div>
+        <div class="who"><div class="nm">Madi Brewster</div><div class="tt">Account Executive · studied with Gabby</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach" id="approach">
+  <div class="wrap">
+    <div class="approach-grid">
+      <div class="reveal">
+        <div class="eyebrow">How I work</div>
+        <h2 class="display">A type A planner who genuinely <em>loves</em> the plan.</h2>
+        <p class="lede">Give me the goal and I'll build the plan, the content, and the reporting that proves it worked. I'm organized to a fault and I manage my time well, which is how I've handled whole marketing functions on my own without anything slipping.</p>
+      </div>
+      <div class="reveal">
+        <ul>
+          <li><span class="b">✦</span> <span>I keep a clear calendar and defined KPIs, so everyone always knows what's shipping and why.</span></li>
+          <li><span class="b">✦</span> <span>I'm self-managed and entrepreneurial, comfortable owning a function end to end and reporting up cleanly.</span></li>
+          <li><span class="b">✦</span> <span>I move from strategy to execution without a handoff, which keeps the work fast and the vision intact.</span></li>
+          <li><span class="b">✦</span> <span>I care about the metric at the end of the quarter as much as the craft along the way.</span></li>
+          <li><span class="b">✦</span> <span>I lean on AI tools like ChatGPT and Gemini to work smarter, not to replace the human part of marketing.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <p class="close">Wellness is the rare place where what I do for a living and what I care about most are the <em>same thing</em>.<br>That overlap is my edge.</p>
+    <div class="fwordmark">Gabby Sobieski</div>
+    <div class="small">Digital Marketing · Strategy through Execution · © 2026</div>
+  </div>
+</footer>
+
+<script>
+  // Nav background on scroll
+  const nav=document.getElementById('nav');
+  const onScroll=()=>{nav.classList.toggle('scrolled',window.scrollY>60);};
+  window.addEventListener('scroll',onScroll);onScroll();
+
+  // Reveal on scroll
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Carousel
+  const track=document.getElementById('track');
+  const slides=track.children.length;
+  const dotsWrap=document.getElementById('dots');
+  let idx=0;
+  for(let i=0;i<slides;i++){
+    const d=document.createElement('button');
+    d.className='dot'+(i===0?' active':'');
+    d.addEventListener('click',()=>go(i));
+    dotsWrap.appendChild(d);
+  }
+  const dots=[...dotsWrap.children];
+  function go(n){
+    idx=(n+slides)%slides;
+    track.style.transform=`translateX(-${idx*100}%)`;
+    dots.forEach((d,i)=>d.classList.toggle('active',i===idx));
+  }
+  document.getElementById('next').addEventListener('click',()=>go(idx+1));
+  document.getElementById('prev').addEventListener('click',()=>go(idx-1));
+
+  // Swipe support
+  let sx=null;
+  track.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+  track.addEventListener('touchend',e=>{
+    if(sx===null)return;
+    const dx=e.changedTouches[0].clientX-sx;
+    if(Math.abs(dx)>50)go(dx<0?idx+1:idx-1);
+    sx=null;
+  });
+</script>
+</body>
+</html>
